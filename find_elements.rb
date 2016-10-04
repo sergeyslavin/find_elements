@@ -2,7 +2,7 @@ class FindElements
   def self.find_elements_for_number(list, number)
     contains_non_numeric = list.select { |e| !e.is_a? Numeric }
     if !contains_non_numeric.empty? or list.size < 3
-      raise "Input array contains non numeric values: #{contains_non_numeric}"
+      raise "Input array contains invalid values: #{contains_non_numeric}"
     end
 
     #For trivial search
