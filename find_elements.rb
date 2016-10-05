@@ -7,8 +7,8 @@ class FindElements
 
     #For trivial search
     sum_of_input_values = list.inject(0, :+)
-    if list.size == 3 and sum_of_input_values == number
-      return list
+    if list.size == 3
+      return sum_of_input_values == number ? list : nil
     end
 
     list_size = list.size - 1
@@ -27,4 +27,4 @@ class FindElements
   end
 end
 
-puts FindElements.find_elements_for_number([0.5,0.5,1,62,26,2,6], 8.5)
+puts FindElements.find_elements_for_number([0.5,0,3], 3.5)
